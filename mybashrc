@@ -1,0 +1,41 @@
+# this is .mybashrc
+# make your own magic here
+#[ -d /opt/sfw/bin ] && PATH=$PATH:/opt/sfw/bin
+#[ -d /usr/cuda/bin ] && PATH=$PATH:/usr/cuda/bin
+[ -d /usr/local/cuda-9.0/bin ] && PATH=/usr/local/cuda-9.0/bin:$PATH
+export PATH
+#alias sqlplus='/app/oracle/product/10.2.0/client_1/bin/sqlplus'
+#alias xcode='/Applications/Xcode.app/Contents/MacOS/Xcode'
+# end
+#
+
+PiLogin() {
+   ssh dsanch65@pi0${1}.csc.calpoly.edu
+}
+GpuLogin() {
+   ssh 127x${1}.csc.calpoly.edu
+}
+
+#limit max processes
+ulimit -u 80
+
+#Previous history commands
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+export HISTCONTROL=ignoredups
+
+# Set up left/right word skipping
+bind '"\e[1;5D": backward-word'
+bind '"\e[1;5C": forward-word'
+
+alias getMake='~/cpe357/gettingMakeFiles.b'
+alias turnIn='~/cpe357/assignmentTurnIn.b'
+alias myZip='~/cpe357/zipMyFiles.sh'
+alias getDetails='~/cpe357/assignmentDetails.b'
+alias myStyleC='~/cpe357/styleCheck.sh'
+alias myComplex='~/cpe357/complexityCheck.sh'
+alias psMe='ps -U dsanch65'
+alias piLogin='~/cpe315/scripts/piLogin.sh'
+alias genMake='~/cpe419/scripts/makeFileGen.b'
+alias validator='//home/dsanch65/csc431/mini-compiler/validator.py'
+alias javaParser='/home/dsanch65/csc431/given_parser/runParser.b'
