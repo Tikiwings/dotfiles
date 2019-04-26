@@ -24,6 +24,7 @@ set tabstop=3
 set linebreak
 set expandtab
 " set columns=80
+set colorcolumn=80
 set nowrap
 set showmatch
 set history=1000
@@ -56,9 +57,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdcommenter'
 "Plug 'valloric/youcompleteme'
+Plug 'ajh17/VimCompletesMe'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
-"Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 
 "Plug 'junegunn/fzf', { 'dir': '~.fzf', 'do': '.install --all' }
 "Plug 'juneguun/fzf.vim'
